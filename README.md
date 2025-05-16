@@ -1,8 +1,4 @@
-Great! Here's a **GitHub-ready `README.md` version** of your project proposal, now with **emojis**, clean formatting, and professional structure. You can copy-paste this directly into your GitHub repository.
-
----
-
-# 💼 IT Salary Survey Analysis (2018–2020) 📊
+# 💼 IT Salary Survey Analysis (2018–2020) Proposal 📊
 
 ## 🧾 Project Overview
 This project explores salary trends among IT professionals across Europe using three years of anonymous salary survey data (2018–2020). The goal is to uncover insights related to compensation patterns based on job roles, experience levels, locations, company types, and technologies used in the industry.
