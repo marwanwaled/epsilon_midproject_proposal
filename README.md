@@ -134,15 +134,3 @@ Raw Datasets
 ├── Visualization Dashboards
 └── Export Insights & Cleaned Data
 ```
-
----
-
-Let me know if you'd like:
-- A **Jupyter notebook template**
-- A **requirements.txt** file
-- A **GitHub Actions workflow** for automated analysis runs
-- Or to add **machine learning modeling** (e.g., predicting salary ranges)
-
---- 
-
-✅ You're now ready to start coding and analyzing!
