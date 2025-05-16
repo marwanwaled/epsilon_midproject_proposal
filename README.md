@@ -60,27 +60,56 @@ Each file contains anonymized responses covering:
 ---
 
 ## 🧩 Methodology
+
 ### 1. **Data Integration**
-- Load and normalize all three datasets.
-- Merge them into a unified DataFrame with a new `Year` column.
+- Load all three datasets (`2018`, `2019`, `2020`) using Pandas.
+- Identify overlapping and unique columns.
+- Rename and normalize column names for consistency.
+- Merge datasets into a unified DataFrame with a new `Year` column for temporal analysis.
 
 ### 2. **Data Cleaning**
-- Handle missing values appropriately.
-- Normalize categorical variables (e.g., job titles, seniority levels).
-- Convert inconsistent formats for numerical fields like salary.
+- Handle missing values: impute where appropriate or drop rows/columns if negligible.
+- Convert inconsistent data types (e.g., salary strings to numeric).
+- Normalize categorical variables:
+  - Map equivalent job titles (e.g., "Fullstack" vs "Full-stack")
+  - Standardize location names (e.g., "Munich" vs "München")
+  - Harmonize seniority levels (e.g., "Senior", "Lead", "Principal")
+- Detect and handle outliers in salary fields using IQR or Z-score methods.
 
-### 3. **Exploratory Data Analysis (EDA)**
+### 3. **Feature Engineering**
+- Derive new features such as:
+  - Salary per year of experience (`Salary / Years_of_Experience`)
+  - Salary change per year (for longitudinal analysis)
+  - Binary flag for remote work availability (from 2020 data)
+- Encode categorical variables using:
+  - One-Hot Encoding for nominal categories (e.g., city, country)
+  - Ordinal Encoding for ordered categories (e.g., seniority levels)
+
+### 4. **Exploratory Data Analysis (EDA)**
 - Summary statistics: mean, median, min/max salaries.
-- Salary distributions by role, country, year.
-- Correlation between salary and experience/company size.
-- Time-based visualizations (trends from 2018–2020).
+- Distribution plots: histogram, boxplots, violin plots.
+- Grouped analysis:
+  - Salary by job title and experience level
+  - Salary by location (city/country heatmaps)
+  - Salary by tech stack/domain
+- Correlation matrices and pair plots to explore relationships.
+- Time-based analysis: salary growth, role popularity, location shifts.
 
-### 4. **Insights & Reporting**
+### 5. **Visualization Strategy**
+- Use **Seaborn** and **Matplotlib** for:
+  - Line charts showing salary trends over time
+  - Bar charts comparing job roles
+  - Heatmaps of salary distribution by country
+  - Scatter plots for salary vs. experience
+  - Cluster maps to visualize tech stack clusters
+- Optional: use **Plotly/Dash** for interactive dashboards.
+
+### 6. **Insights & Reporting**
 - Top-paying roles and technologies.
 - Comparison of salary growth between years.
-- Gender pay gap analysis (if data permits).
 - Country-wise salary rankings.
 - Recommendations for professionals and employers.
+- Export cleaned datasets for further machine learning modeling.
 
 ---
 
@@ -88,23 +117,32 @@ Each file contains anonymized responses covering:
 - Cleaned and integrated dataset (`CSV`)
 - Jupyter Notebook with EDA and visualizations
 - Final report summarizing findings and visual dashboards
-- README file with documentation and insights
 
 ---
 
-## 📚 Ethical Considerations
-All data used is publicly available and anonymized. No personal identifiable information will be processed beyond what is already shared in the datasets.
+## ✅ Technical Workflow Summary
+
+```
+Raw Datasets
+│
+├── Load and Normalize Columns
+├── Handle Missing Values
+├── Convert Data Types
+├── Encode Categorical Features
+├── Feature Engineering
+├── Exploratory Data Analysis
+├── Visualization Dashboards
+└── Export Insights & Cleaned Data
+```
 
 ---
 
-## 🧑‍💻 Contribution Guidelines
-Contributions are welcome! Please feel free to fork this repo, make improvements, or suggest new visualizations or analyses.
+Let me know if you'd like:
+- A **Jupyter notebook template**
+- A **requirements.txt** file
+- A **GitHub Actions workflow** for automated analysis runs
+- Or to add **machine learning modeling** (e.g., predicting salary ranges)
 
----
+--- 
 
-## 📬 Contact
-For questions or contributions, reach out via email or open an issue on GitHub.
-
----
-
-Let me know if you'd like a **GitHub Actions workflow**, **requirements.txt**, or **Jupyter notebook template** to go along with this!
+✅ You're now ready to start coding and analyzing!
