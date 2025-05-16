@@ -14,7 +14,7 @@ All datasets are sourced from Kaggle:
 
 Includes:
 - `IT Salary Survey EU 2018.csv`
-- `T Salary Survey EU 2019.csv`
+- `IT Salary Survey EU 2019.csv`
 - `IT Salary Survey EU 2020.csv`
 
 Each file contains anonymized responses covering:
